@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card"
 import { ArrowRight, CheckCircle2 } from "lucide-react"
 import { bankingServices, whyChooseUs, testimonials } from "@/lib/constants"
 import { Link } from "react-router-dom"
+import logo from '../../assets/images/UforoLogo.svg'
 
 export default function Home() {
   return (
@@ -12,10 +13,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">₹</span>
-              </div>
-              <span className="font-bold text-xl text-primary">Uforo MFB</span>
+              <img src={logo} className="w-auto h-8" />
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="#services" className="text-md text-foreground hover:text-secondary transition-colors">
@@ -219,11 +217,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold">₹</span>
-                </div>
-                <span className="font-bold text-primary">Uforo MFB</span>
+              <div className="flex items-center gap-2 mb-4 border-b border-border pb-4">
+                <img src={logo} className="w-auto h-12" />
               </div>
               {/* <p className="text-sm text-foreground/60"></p> */}
               <address className="font-bold">
@@ -287,16 +282,6 @@ export default function Home() {
                     Data Protection Policy
                   </Link>
                 </li>
-                {/* <li>
-                  <a href="#" className="hover:text-secondary transition-colors">
-                    Terms of Service
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-secondary transition-colors">
-                    Compliance
-                  </a>
-                </li> */}
               </ul>
             </div>
           </div>
