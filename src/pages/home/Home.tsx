@@ -1,19 +1,23 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { ArrowRight, CheckCircle2 } from "lucide-react"
+import { ArrowRight, CheckCircle2, Mail, Phone } from "lucide-react"
 import { bankingServices, whyChooseUs, testimonials } from "@/lib/constants"
 import { Link } from "react-router-dom"
-import logo from '../../assets/images/UforoLogo.svg'
+import logo from '../../assets/images/uforo_new_logo.png'
+import facebook from '../../assets/images/facebook.png'
+import instagram from '../../assets/images/instagram.png'
+import xIcon from '../../assets/images/X-icon.png'
+
 
 export default function Home() {
   return (
     <div className="w-full">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
+      <nav className="sticky top-0 z-50 bg-white backdrop-blur">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <img src={logo} className="w-auto h-8" />
+              <img src={logo} className="w-auto h-16" />
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="#services" className="text-md text-foreground hover:text-secondary transition-colors">
@@ -36,10 +40,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 text-balance">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6 text-balance">
                 Banking Made Simple for Every Nigerian
               </h1>
-              <p className="text-lg text-foreground/80 mb-8 text-pretty">
+              <p className="text-lg text-black mb-8 text-pretty">
                 Experience seamless banking with Uforo MFB. Save, borrow, transfer, and grow your money with Nigeria's most trusted microfinance bank.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -68,7 +72,7 @@ export default function Home() {
             <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
               <div className="space-y-6">
                 <div className="text-center p-6 bg-muted/50 rounded-xl">
-                  <div className="text-3xl font-bold text-secondary mb-2">50K+</div>
+                  <div className="text-3xl font-bold text-secondary mb-2">100K+</div>
                   <p className="text-sm text-foreground/60">Entrepreneurs Empowered</p>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -91,8 +95,8 @@ export default function Home() {
       <section id="services" className="py-20 bg-card">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Tailored Financial Solutions</h2>
-            <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Tailored Financial Solutions</h2>
+            <p className="text-lg text-black max-w-2xl mx-auto">
               From savings to loans, transfers to payments — we've got all your banking needs covered with simple, transparent services.
             </p>
           </div>
@@ -101,7 +105,7 @@ export default function Home() {
             {bankingServices.map((service, idx) => {
               const Icon = service.icon
               return (
-                <Card key={idx} className="bg-background border-border hover:border-secondary/50 transition-colors p-8">
+                <Card key={idx} className="bg-background/50 border-border hover:border-secondary/50 transition-colors p-8">
                   <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
                     <Icon className="w-6 h-6 text-secondary" />
                   </div>
@@ -147,7 +151,7 @@ export default function Home() {
                 })}
               </div>
             </div>
-            <Card className="bg-linear-to-br from-secondary/10 to-secondary/5 border-secondary/30 p-8">
+            <Card className="bg-white border-secondary/30 p-8">
               <div className="space-y-8">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-secondary mb-2">Start Banking Today</div>
@@ -174,13 +178,13 @@ export default function Home() {
       <section id="testimonials" className="py-20 bg-card">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Success Stories from Our Customers</h2>
-            <p className="text-lg text-foreground/70">Real people, real businesses, real growth</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Success Stories from Our Customers</h2>
+            <p className="text-lg text-black">Real people, real businesses, real growth</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, idx) => (
-              <Card key={idx} className="bg-background border-border p-8">
+              <Card key={idx} className="bg-background/50 border-border p-8">
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <span key={i} className="text-secondary text-lg">
@@ -200,13 +204,13 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary text-primary-foreground py-20">
+      <section className="bg-white text-primary-foreground py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Ready to Grow Your Business?</h2>
-          <p className="text-lg mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance text-black">Ready to Grow Your Business?</h2>
+          <p className="text-lg mb-8 text-black max-w-2xl mx-auto">
             Join thousands of entrepreneurs who have already transformed their dreams into reality
           </p>
-          <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground gap-2">
+          <Button size="lg" className="bg-black hover:bg-secondary/90 text-secondary-foreground gap-2">
             Start Your Journey <ArrowRight className="w-4 h-4" />
           </Button>
         </div>
@@ -225,8 +229,9 @@ export default function Home() {
                 <p className="text-sm text-foreground/60 mt-4">No 4, Market Road</p>
                 <p className="text-sm text-foreground/60">Ikpe Ikot Nkon</p>
                 <p className="text-sm text-foreground/60">Ini LGA, Akwa-Ibom State</p>
-                <p className="text-sm text-foreground/60">Nigeria</p>
-                <p className="text-sm text-foreground/60">Email: info@uforomfb.com</p>
+                <p className="text-sm text-foreground/60 mb-3">Nigeria</p>
+                <p className="text-sm text-foreground/60 flex gap-2"><Mail className="h-5 w-5" /> info@uforomfb.com</p>
+                <p className="text-sm text-foreground/60 flex gap-2"><Phone className="h-5 w-5" /> +234 808 635 2947</p>
               </address>
             </div>
             <div>
@@ -253,9 +258,9 @@ export default function Home() {
               <h4 className="font-bold text-primary mb-4">Company</h4>
               <ul className="space-y-2 text-sm text-foreground/70">
                 <li>
-                  <a href="#" className="hover:text-secondary transition-colors">
+                  <Link to="/about" className="hover:text-secondary transition-colors">
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="hover:text-secondary transition-colors">
@@ -270,23 +275,31 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h4 className="font-bold text-primary mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm text-foreground/70">
+              <h4 className="font-bold text-primary mb-4">Socials</h4>
+              <ul className="flex space-x-4 text-sm text-foreground/70 items-center">
                 <li>
-                  <Link to="/privacy-policy" className="hover:text-secondary transition-colors">
-                    Privacy Policy
-                  </Link>
+                  <a href="https://web.facebook.com/profile.php?id=61580525894673" target="_blank" className="hover:text-secondary transition-colors">
+                    <img src={facebook} className="w-8 h-8" alt="" />
+                  </a>
                 </li>
                 <li>
-                  <Link to="/data-protection-policy" className="hover:text-secondary transition-colors">
-                    Data Protection Policy
-                  </Link>
+                  <a href="https://www.instagram.com/uforomicrofinancebank/" target='_blank' className="hover:text-secondary transition-colors">
+                    <img src={instagram} className="w-8 h-8" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/uforomfb" target='_blank' className="hover:text-secondary transition-colors">
+                    <img src={xIcon} className="w-8 h-8" alt="" />
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-border pt-8 text-center text-sm text-foreground/60">
+          <div className="border-t border-border pt-8 text-center text-sm text-foreground/60 flex flex-col md:flex-row gap-3 justify-center">
             <p>&copy; {new Date().getFullYear()} UforoMFB. All rights reserved. Empowering Financial Inclusion. Transforming Lives.</p>
+            <Link to="/privacy-policy" className="hover:text-secondary transition-colors hover:underline">
+              Privacy Policy
+            </Link>
           </div>
         </div>
       </footer>
