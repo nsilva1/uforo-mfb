@@ -263,9 +263,9 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-secondary transition-colors">
+                  <Link to='/careers' className="hover:text-secondary transition-colors">
                     Careers
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="hover:text-secondary transition-colors">
