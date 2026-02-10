@@ -8,7 +8,7 @@ const UforoPrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-10 px-4 sm:px-6 lg:px-8">
 
-      <div className='flex gap-2 cursor-pointer mb-3' onClick={() => navigate(-1)}>
+      <div className='flex gap-2 cursor-pointer mb-3' onClick={() => navigate('/')}>
         <ArrowLeft />
         Back
       </div>
