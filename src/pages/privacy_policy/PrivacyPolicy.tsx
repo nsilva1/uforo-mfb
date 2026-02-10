@@ -114,7 +114,7 @@ const UforoPrivacyPolicy = () => {
                 <li>Request deletion where allowed by law</li>
               </ul>
               <p className="text-sm bg-gray-100 p-3 rounded">
-                Contact our Data Protection Officer: <a href="mailto:dpo@uforomfb.com.ng" className="text-primary font-bold hover:underline">dpo@uforomfb.com.ng</a>
+                Contact our Data Protection Officer: <a href="mailto:dpo@uforomfb.com" className="text-primary font-bold hover:underline">dpo@uforomfb.com</a>
               </p>
             </div>
           </section>
