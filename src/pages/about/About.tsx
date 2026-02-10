@@ -25,7 +25,7 @@ export const About = () => {
                     <Link to="/about" className="text-md text-foreground hover:text-secondary transition-colors">
                       About
                     </Link>
-                    <Link to="/" className="text-md text-foreground hover:text-secondary transition-colors">
+                    <Link to="/careers" className="text-md text-foreground hover:text-secondary transition-colors">
                       Careers
                     </Link>
                   </div>
